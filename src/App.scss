@@ -1,0 +1,81 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  background-image: url(./img/background.svg);
+  font-family: "Lobster", cursive;
+}
+ul {
+  list-style: none;
+}
+.main {
+  padding-top: 50px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  margin: auto;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 12px;
+  transition: all 2s;
+  animation: breath 2s infinite;
+}
+.form {
+  margin: auto;
+}
+.btns {
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+.plan-way {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 28px;
+  overflow-x: hidden;
+  img {
+    $size: 60px;
+    height: $size;
+    width: $size;
+    transition: all 10s;
+    animation: fly 10s infinite linear;
+  }
+}
+
+@keyframes breath {
+  0% {
+    letter-spacing: 0;
+  }
+  50% {
+    letter-spacing: 4px;
+  }
+  100% {
+    letter-spacing: 0;
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(25vw, -8px);
+  }
+  50% {
+    transform: translate(50vw, 0);
+  }
+  75% {
+    transform: translate(75vw, -8px);
+  }
+  100% {
+    transform: translat(100vw, 0);
+  }
+}
